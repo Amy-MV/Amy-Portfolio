@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Portfolio</title>
+  <title>Amy Portfolio</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -25,7 +25,8 @@
 </head>
 
 <body>
-<!-- Add your site or application content here -->
+<!-- Hero section, Navbar -->
+
   <header class="homepage hero">
    <div class="content-wrapper">
       <nav>
@@ -35,6 +36,9 @@
           <li><a href="#projects">projects</a></li>
           <li><a href="#contact" id="contact-link">contact</a></li>
         </ul>
+        <button class="burger-menu" id="burger-menu">
+          <ion-icon class="bars" name="menu-outline"></ion-icon>
+        </button>
       </nav>
     <div class="home-title">
       <h1>Hello! My name is Amy Varisli</h1>
@@ -45,17 +49,18 @@
    </div>
  </header>
 
+ <!--About-->
+
 <main>
-  <article class="portfolio">
-  <section id="about-me">
+  <section id="about">
     <div class="content-wrapper">
       <div class="about-content-wrapper">
-      <figure>
-         <img src="img/amyv.png" alt="photo of Amy" id="about-photo">
-      </figure>
-      <div class="about-info"></div>
-      <h3>About Me</h3>
-      <p class="about-text">
+    <figure>
+      <img src="img/amyv.png" alt="photo of Amy" id="profile-image">
+    </figure>
+    <div class="about-info">
+        <h3>About Me</h3>
+        <p  class="about-text">
          With a determined mindset and an eagerness to expand my knowledge in the world of technology,
          I am a dedicated challenger who never gives up on achieving my goals. 
          <br>
@@ -69,16 +74,17 @@
          exploring the great outdoors through adventurous hikes, 
          camping and peaceful fishing trips to be a great way 
          to disconnect from technology and unwind. 
-      </p>
+        </p>
       </div>
-     </div>
-    </div>
-  </section>
+   </section>
 
+   <!--Skills section-->
+
+<article class="portfolio">
   <section id="skills">
-    <div class="content-wrapper">
-      <h3 class="skills-header">Skills</h3>
-      <h4>Developer Skills</h4>
+   <div class="content-wrapper">
+    <h3 class="skills-header">Skills</h3>
+    <h4>Developer Skills</h4>
       <p>HTML5 | CSS3 | JavaScript | React.js | Responsive Typography 
         | Flexbox & CSS Grid | APIs | Media queries | ES6 | JSX | 
         Managing Data Flow | Version Control.
@@ -91,14 +97,15 @@
       </div>
   </section>
 
+  <!--Projects section-->
+
   <section id="projects">
     <div class="content-wrapper">
         <h3 class="portfolio-header">Projects</h3>
         <div class="portfolio-wrapper">
-
           <div class="home-portfolio-piece">
            <figure>
-             <a href=" https://amy-mv.github.io/Guess-The-Word-Game/ " target="_blank">
+             <a href=" https://amy-mv.github.io/Guess-The-Word-Game/ "  target="_blank">
              <img src="img/guess-word.png" alt="guess word"></a>
           </figure>
           <h4>Guess the Word Game</h4>
@@ -107,11 +114,11 @@
               If the player guesses all the letters correctly before they use up their allotted guesses, they win!
             </p>
             <br>
-            <p><span>Skills:</span> Manipulate the DOM, Vanilla JavaScript.</p>
-            <p><span>Tools:</span> GitHub, JSON.</p>
-            <a class= "project-link" href="https://amy-mv.github.io/Guess-The-Word-Game/ " 
+          <p><span>Skills:</span> Manipulate the DOM, Vanilla JavaScript.</p>
+          <p><span>Tools:</span> GitHub, JSON.</p>
+          <a class= "project-link" href="https://amy-mv.github.io/Guess-The-Word-Game/ " 
             target= "_blank">Check It Out</a>
-          </div>
+        </div>
   
         <div class="home-portfolio-piece">
           <figure>
@@ -185,60 +192,110 @@
       </div>
     </article>
   </section>
-  </main>
-  
-<footer id="contact">
-   <div class="content-wrapper">
-          <h3>Let's Connect</h3>
-          <div class="contact-wrapper">
-          <div class="contact-info">
-            <h5 class="contact-title">Hire me</h5>
-            <a href="mailto:amymvarisli@gmail.com" aria-label=
-            "Link to send email to Amy" target="_blank">
-            amymvarisli@gmail.com</a>
-          </div>
+</main>
 
-          <div class="contact-info-follow-section">
-            <h5 class="contact-title">Follow me</h5>
-          <ul class="social-icons">
-           <li>
-            <a href="https://www.linkedin.com/in/amy-varisli-838746250/" 
-             target="_blank"
-            ><img
-              src="icons/icons8-linkedin-circled.gif"
-              alt="Linkedin"
-              loading="lazy"
-              class="socicon"/></a>
-           </li>
-           <li>
-            <a href="https://github.com/Amy-MV" 
-             target="_blank">
-             <img
-             src="icons/icons8-github.gif"
-             alt="Github"
-             loading="lazy"
-             class="socicon"/></a>
-           </li>
+<!--Contact section-->
+
+  <section class="contact" id="contact">
+    <h2>Get In Touch With Me</h2>
+    <div class="contact-form-container">
+      <div class="contact-form">
+        <form action="https://formspree.io/f/xyylngw" method="POST">
+          <div class="form-control">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="sender-name"
+              placeholder="Enter Your Name"
+              class="input-field"
+              required
+            />
           </div>
-        </div>
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="sender-email"
+              placeholder="Enter Your Email"
+              class="input-field"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              cols="60"
+              rows="10"
+              placeholder="Enter Your Message"
+              name="message"
+              class="input-field"
+              required
+            ></textarea>
+          </div>
+          <input
+            type="submit"
+            value="Submit"
+            id="submit-btn"
+            class="submit-btn"
+          />
+        </form>
       </div>
     </div>
-    <div class="copyright">
-    <p>Copyright 2023 | Amy Varisli</p>
-    </div>
-</footer>
-           
-<script src="js/vendor/modernizr-3.6.0.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" 
-integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script>
-  window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
-</script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+  </section>
 
-  <script src="js/vendor/modernizr.min.js"></script>
-  <script src="js/app.js"></script>
+      <!-- Social accounts - Fixed to the right -->
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/amy-varisli-838746250/" target="_blank"
+          ><img
+            src="icons8-linkedin-circled.gif"
+            alt="Linkedin"
+            loading="lazy"
+            class="socicon"
+        /></a>
+        <a href="https://github.com/Amy-MV" target="_blank"
+          ><img src="icons8-github.gif" alt="Github" class="socicon"
+        /></a>
+       </div>
+  
+       <!-- Scroll to top -->
+      <i class="scroll-up" id="scroll-up"
+      ><img
+        src="icons/icons8-upward-arrow.gif"
+        class="socicon up-arrow"
+        alt="up-arrow"
+    /></i>
+     <footer>
+      <p class="copy"> &copy; Copyright 2023
+          Built with &#x2661; 
+          by Amy-Varisli.
+        </p>
+      </footer>
+      <!-- Website scripts -->
+      <script src="assets/js/app.js"></script>
+  
+      <!-- Ion icons scripts -->
+      <script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      ></script>
+    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+   <script>
+     window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
+   </script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
+
+   <script src="js/vendor/modernizr.min.js"></script>
+   <script src="js/app.js"></script>
 
 </body>
 </html>
